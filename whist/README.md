@@ -27,3 +27,21 @@ any coding language you want.
 4. Create a docker compose that runs 3 instances of the app you created + the load
 balancer.
 5. Open browser and check http://localhost:9090, verify you see different IP each refresh.
+
+# The below tasks were provided in a frontal interview
+Task 1:
+1. Use the repo you created in your home assignment.
+2. Create github action that on commit :
+3. Builds the image on you application, with 2 tags :
+* Latest
+* ImageName-Branch-CommitShortSha : Get the branch name and commit sha from git action. Example for expected result: ShowIps-dev-1c0ad2f
+
+    Then push image to ECR (US West (Oregon)) on AWS 
+
+
+
+Task 2:
+1. On aws , in US West (Oregon) regions create:
+* ECS cluster with EC2 capacity provider
+* Create task definition for the application you wrote
+* Create service with a load balancer that runs 2 instance of your application (2 tasks)
