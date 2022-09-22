@@ -1,0 +1,37 @@
+## Note: This depricated yml file is my 1st attempt at scaling with docker-compose.
+version: '3.7'
+
+services:
+  # Build the app services
+  app1:
+    container_name: app1
+    #environment:
+      #my_var: app1
+    build: app
+    ports:
+      - 5001:5000
+  app2:
+    container_name: app2
+    #environment:
+      #my_var: app2
+    build: app
+    ports:
+      - 5002:5000
+  app3:
+    container_name: app3
+    #environment:
+      #my_var: app3
+    build: app
+    ports:
+      - 5003:5000
+  nginx:
+    container_name: nginx
+    build: nginx
+    # Bind the port 80 of container to machine port 9090
+    ports:
+      - 9090:80
+    # Make app as nginx dependency service
+    depends_on:
+      - app 1
+      - app 2
+      - app 3
