@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gilubtechdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gilubtechdemo
+  template:
+    metadata:
+      labels:
+        app: gilubtechdemo 
+    spec:
+      containers:
+        - name: gilubtechdemo 
+          image: mydemoflask.azurecr.io/gilubtechdemo
+          ports:
+          - containerPort: 5000

@@ -1,0 +1,12 @@
+#Build and push Docker images to Azure Container Registry
+https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/acr-template?view=azure-devops
+
+#webapp
+https://www.youtube.com/watch?v=7qyWriiUenw
+https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops&tabs=python%2Cyaml
+
+#postman
+https://www.youtube.com/watch?v=6b1J03fDnOg&t=3s
+
+#Build & deploy AKS
+https://docs.microsoft.com/en-us/azure/aks/devops-pipeline?pivots=pipelines-yaml
