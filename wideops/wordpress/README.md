@@ -1,4 +1,4 @@
-# construct an autoscaling solution on GKE for node application
+# Construct an autoscaling solution on GKE for node application
 
 
 
