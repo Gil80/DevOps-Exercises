@@ -1,3 +1,5 @@
+NOTE: This exercise was excuted on GCP using a node application. This exercise is not related to the Wordpress exercise.
+
 # Construct an autoscaling solution on GKE for a node application
 
 
