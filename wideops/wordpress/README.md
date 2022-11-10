@@ -1,20 +1,9 @@
-# Construct an autoscaling solution on GKE for node application
-
-
-
-TL;DR
-
-* I was able to deploy the node app
-* It is accessible via HTTP
-* It is communicating with MongoDB
-* Autoscaling is applied
-* HTTPS is not enabled
-
+# Construct an autoscaling solution on GKE for a node application
 
 
 ## Requirements
 
-1. Mongodb replicaset installed on 3 **instances (not gke)** - master,slave,arbiter
+1. Mongodb replicaset installed on 3 **instances (not gke)** - master, slave & arbiter
 2. Nodeapp code should be updated to use the replicaset instead of a single server
 3. Nodeapp should be deployed on GKE with autoscaling and should scale from 2 to 10 pods.
 4. Nodeapp should be exposed with an ingress with http and https (self-signed certificate can be used for https)
@@ -92,7 +81,7 @@ TL;DR
 
 
 
-1. nable access to APIs
+1. Enable access to APIs
 
 2. Provided my CC details to enable GCR at [gcr.io]()
 
@@ -198,17 +187,6 @@ Require stack:
   requireStack: [ '/usr/src/app/nodeapp.js' ]
 ```
 
-It seems like it's looking for **items.js** however it find `Item` folder instead. I tried several path changes to no avail.
-
-
-### Problem 2:
-
-1. I know that the certificate needs to be saved on the load balancer
-2. I used Letsencrypt.org service, however, I had lots of issues trying to get **snapd** service working
-3. Given snapd is a service for snap package manager, I got stuck and `snap install core`
-4. It required `systemd` to start at boot, but I wasn't sure how to reboot/restart the LB and if it would really solve the problem.
-5. Lastly, I wasn't able to find a free DDNS that provide DNS TXT record for free
-6. The last step that I did was: `certbot -d wideops-candidate6.ddnsfree.com --manual --logs-dir certbot --config-dir certbot --work-dir certbot --preferred-challenges dns certonly`
 
 --EOF--
 
