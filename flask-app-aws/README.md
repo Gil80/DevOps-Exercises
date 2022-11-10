@@ -1,4 +1,4 @@
-# Whist
+# Flask-App
 ## Description
 This project runs a flask app that prints the IP address of the container its running on, and an Nginx webserver that acts as a round-robin load balancer.
 
@@ -28,7 +28,7 @@ any coding language you want.
 balancer.
 5. Open browser and check http://localhost:9090, verify you see different IP each refresh.
 
-# The below tasks were provided in a frontal interview
+# The below tasks were executed using AWS
 Task 1:
 1. Use the repo you created in your home assignment.
 2. Create github action that on commit :
