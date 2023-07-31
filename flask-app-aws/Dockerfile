@@ -15,18 +15,18 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 
 # create and activate virtual environment
 # using final folder name to avoid path issues with packages
-#RUN python3 -m venv /home/whist/venve
-#ENV VIRTUAL_ENV=/home/whist/venve
-#ENV PATH="/home/whist/venve/bin:$PATH"
-#RUN source /home/whist/venve/bin/activate
+RUN python3 -m venv /home/gil/venve
+ENV VIRTUAL_ENV=/home/gil/venve
+ENV PATH="/home/gil/venve/bin:$PATH"
+RUN source /home/gil/venve/bin/activate
 #
 ## create user without password
-#RUN adduser whist -D
+RUN adduser gil -D
 #
-#WORKDIR /home/whist/app
+WORKDIR /home/gil/app
 
 # Create a folder app in container and work inside it
-#WORKDIR /app
+WORKDIR /app
 
 COPY /app/requirements.txt .
 
