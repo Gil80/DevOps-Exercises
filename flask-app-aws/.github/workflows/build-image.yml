@@ -38,7 +38,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: gil-whist-app
+        ECR_REPOSITORY: gils-repo
         IMAGE_TAG: ${{ steps.vars.outputs.sha_short }}
       run: |
         # Build a docker container and
