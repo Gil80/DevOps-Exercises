@@ -32,7 +32,7 @@ any coding language you want.
 Task 1:
 1. Use the repo you created in your home assignment.
 2. Create github action that on commit :
-3. Builds the image on you application, with 2 tags :
+3. Builds the image of your application, with 2 tags :
 * Latest
 * ImageName-Branch-CommitShortSha : Get the branch name and commit sha from git action. Example for expected result: ShowIps-dev-1c0ad2f
 
