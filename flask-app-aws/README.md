@@ -6,7 +6,8 @@ The `docker-compose.yml` is configured to run three instances (containers) of th
 
 ## Usage
 1. Clone this repo to your local machine
-2. From within the root directory of the project, run `docker compose up --build`
+2. From within the root directory of the project, run `docker compose up --build --scale app=3`
+
 3. Once the environment is up and running, browse to `http://localhost:9090` and you should see the IP address of one of the containers running an instance of flask.
 4. Press F5 to see how the round-robin LB directs the request to a different IP/container.
 
